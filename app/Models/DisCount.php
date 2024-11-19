@@ -9,7 +9,7 @@ class DisCount extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['name' ,'amount'];
+    protected $fillable = ['amount'];
 
     public function discountable()
     {
