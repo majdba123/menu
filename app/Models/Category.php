@@ -9,7 +9,7 @@ class Category extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['name' ,'discryption'];
+    protected $fillable = ['name' ,'discryption','menu_id'];
 
 
     public function subcategories()
@@ -25,5 +25,10 @@ class Category extends Model
     public function discounts()
     {
         return $this->morphMany(DisCount::class, 'discountable');
+    }
+
+    public function menu()
+    {
+        return $this->belongsTo(menu::class);
     }
 }
